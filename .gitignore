@@ -26,3 +26,6 @@ bin
 .classpath
 .project
 target
+
+# only for testing purposes
+Jenkinsfile
