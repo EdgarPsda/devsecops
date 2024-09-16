@@ -34,7 +34,11 @@ pipeline{
 
     stage('SonarQube Analysis') {
       steps{
-        sh "mvn clean verify sonar:sonar -Dsonar.projectKey=numeric-application -Dsonar.projectName='numeric-application'"
+        sh "mvn clean verify sonar:sonar \
+  -Dsonar.projectKey=numeric-application \
+  -Dsonar.projectName='numeric-application' \
+  -Dsonar.host.url=http://localhost:9000 \
+  -Dsonar.token=sqp_23514502afc688639cdbc0a7f6a0bf4ccbb27691"
       }
     }
 
