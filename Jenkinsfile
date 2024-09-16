@@ -32,7 +32,7 @@ pipeline{
       }
     }
 
-    stage('SonarQube Analysis') {
+    /* stage('SonarQube Analysis') {
       steps{
         sh "mvn clean verify sonar:sonar \
   -Dsonar.projectKey=numeric-application \
@@ -40,6 +40,18 @@ pipeline{
   -Dsonar.host.url=http://localhost:9000 \
   -Dsonar.token=sqp_23514502afc688639cdbc0a7f6a0bf4ccbb27691"
       }
+    } */
+
+    stage('Vulnerability Scan - Docker'){
+      steps{
+        sh 'mvn dependency-check:check'
+      }
+      post{
+        always{
+          dependencyCheckPublisher pattern: 'target/dependency-check-report.xml'
+        }
+      }
+
     }
 
     stage('Docker Build and Push'){
