@@ -3,5 +3,5 @@ fileignoreconfig:
     checksum: 728e7d12798436b81e7d73096fde872874a281a36a168dc7f94fe0006cc0550e
     ignore_detectors: []
   - filename: Jenkinsfile
-    checksum: c56abeeb56fbc74800074f3d3d8f99d095fcd6741e321a184522617b1194aaea
+    checksum: d15e6b033dc48df5fcb0116e5329914d47c761d160b0cc31a946b3952eb16bda
     ignore_detectors: []
