@@ -1,4 +1,6 @@
 - filename: sec_files/file2
   checksum: 728e7d12798436b81e7d73096fde872874a281a36a168dc7f94fe0006cc0550e
+  ignore_detectors: []
 - filename: Jenkinsfile
   checksum: 04741cd16237ae32bd77ec453385d4eefc45a1ceda4837da5c586ffbcb924f47
+  ignore_detectors: []
