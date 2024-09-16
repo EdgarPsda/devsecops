@@ -1,2 +1,2 @@
-filename: sec_files/file2
-checksum: 728e7d12798436b81e7d73096fde872874a281a36a168dc7f94fe0006cc0550e
+- filename: sec_files/file2
+  checksum: 728e7d12798436b81e7d73096fde872874a281a36a168dc7f94fe0006cc0550e
