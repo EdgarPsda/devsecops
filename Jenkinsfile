@@ -44,7 +44,7 @@ pipeline{
             sh "mvn dependency-check:check"
           },
           "Tryvi Scan": {
-            sh "bash tryvi-docker-image-scan.sh"
+            sh "bash trivy-docker-image-scan.sh"
           }
         )
       }
