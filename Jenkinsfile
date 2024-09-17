@@ -37,6 +37,19 @@ pipeline{
       }
     }
 
+    stage('Vulnerability Scan - Docker'){
+      steps{
+        parallel{
+          "Dependency Scan": {
+            sh "mvn dependency-check:check"
+          },
+          "Tryvi Scan": {
+            sh "bash tryvi-docker-image-scan.sh"
+          }
+        }
+      }
+    }
+
     stage('Docker Build and Push'){
       steps{
         sh 'printenv'
