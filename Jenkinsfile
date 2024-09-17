@@ -39,14 +39,14 @@ pipeline{
 
     stage('Vulnerability Scan - Docker'){
       steps{
-        parallel{
+        parallel(
           "Dependency Scan": {
             sh "mvn dependency-check:check"
           },
           "Tryvi Scan": {
             sh "bash tryvi-docker-image-scan.sh"
           }
-        }
+        )
       }
     }
 
