@@ -14,6 +14,7 @@ secrets_env = [
     "tkn"
 ]
 
+
 deny[msg] {    
     input[i].Cmd == "env"
     val := input[i].Value
